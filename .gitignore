@@ -1,0 +1,26 @@
+# Model weights, fetched via scripts/fetch_models.py
+models/*.dat
+
+# Capstone report and slides, kept locally only
+docs/
+
+# Session logs written at runtime
+*.session.csv
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+.ruff_cache/
+.pytest_cache/
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+

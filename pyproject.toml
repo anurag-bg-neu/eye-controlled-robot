@@ -1,0 +1,41 @@
+[project]
+name = "eye-controlled-robot"
+version = "1.0.0"
+description = "Webcam eye-direction tracking that drives an Arduino robot over serial"
+readme = "README.md"
+requires-python = ">=3.10,<3.15"
+license = { file = "LICENSE" }
+authors = [{ name = "Anurag Bheemappa Gnanamurthy" }]
+keywords = ["computer-vision", "dlib", "opencv", "eye-tracking", "assistive-technology"]
+
+dependencies = [
+    "dlib-bin>=20.0.1",
+    "numpy>=1.26",
+    "opencv-python>=4.10",
+    "pyserial>=3.5",
+]
+
+[project.optional-dependencies]
+plots = [
+    "matplotlib>=3.8",
+    "pandas>=2.2",
+    "seaborn>=0.13",
+]
+
+[project.urls]
+Homepage = "https://github.com/anurag-bg-neu/eye-controlled-robot"
+Repository = "https://github.com/anurag-bg-neu/eye-controlled-robot"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["eye_tracking"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
